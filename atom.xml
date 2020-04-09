@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-09T03:25:49.201Z</updated>
+  <updated>2020-04-09T03:34:40.477Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>停更之后的说明</title>
+    <link href="http://yoursite.com/2020/04/09/49/"/>
+    <id>http://yoursite.com/2020/04/09/49/</id>
+    <published>2020-04-09T03:29:59.000Z</published>
+    <updated>2020-04-09T03:34:40.477Z</updated>
+    
+    <content type="html"><![CDATA[<p>自从使用OneNote后很久没更新博客。后因其他地方编辑的源文件没上传导致博客突然缺了很多文章，有点伤心。再次试试，看还能不能继续写。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;自从使用OneNote后很久没更新博客。后因其他地方编辑的源文件没上传导致博客突然缺了很多文章，有点伤心。再次试试，看还能不能继续写。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="日常 - 生活随感" scheme="http://yoursite.com/categories/%E6%97%A5%E5%B8%B8-%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%84%9F/"/>
+    
+    
+      <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
