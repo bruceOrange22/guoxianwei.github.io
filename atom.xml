@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-09T04:30:43.703Z</updated>
+  <updated>2020-04-09T05:43:41.198Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,20 +21,14 @@
     <link href="http://yoursite.com/2020/04/09/usefulWeb/"/>
     <id>http://yoursite.com/2020/04/09/usefulWeb/</id>
     <published>2020-04-09T03:44:53.000Z</published>
-    <updated>2020-04-09T04:30:43.703Z</updated>
+    <updated>2020-04-09T05:43:41.198Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>记录一些有用的数据下载、效率软件地址，以方便查询学习。</p></blockquote><p>[TOC]</p><h2 id="数据下载类"><a href="#数据下载类" class="headerlink" title="数据下载类"></a>数据下载类</h2><h2 id="数据处理类"><a href="#数据处理类" class="headerlink" title="数据处理类"></a>数据处理类</h2><h2 id="小工具"><a href="#小工具" class="headerlink" title="小工具"></a>小工具</h2><h3 id="时间转换"><a href="#时间转换" class="headerlink" title="时间转换"></a>时间转换</h3><h4 id="年积日、GPS周和对应日期之间的关系查询"><a href="#年积日、GPS周和对应日期之间的关系查询" class="headerlink" title="年积日、GPS周和对应日期之间的关系查询"></a>年积日、GPS周和对应日期之间的关系查询</h4><ol><li><p><a href="http://navigationservices.agi.com/GNSSWeb/" target="_blank" rel="noopener">GPS Calender</a><br>网站以日历的形式展示了过去、现在未来，每个时间段的年积日、GPS周、日期之间的对应关系，方便查询指定日期的GPS周和周内秒。  </p><p><img src="https://raw.githubusercontent.com/guoxianwei/guoxianwei.github.io/picGo/pictures/Snipaste_2020-04-09_12-10-12.jpg" alt="GPS calender"></p></li></ol><ol><li><p>brdm星历 </p><p>用于事后解算，可以配合上面的查询年积日的工具一起使用。  </p><ul><li>NASA :<a href="ftp://cddis.gsfc.nasa.gov/gnss/data/campaign/mgex/daily/rinex3/2020/brdm/" target="_blank" rel="noopener">2020年BRDM星历</a></li></ul></li></ol>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>记录一些有用的数据下载、效率软件地址，以方便查询学习。<br><a id="more"></a></p></blockquote><p>[TOC]</p><h2 id="数据下载类"><a href="#数据下载类" class="headerlink" title="数据下载类"></a>数据下载类</h2><h2 id="数据处理类"><a href="#数据处理类" class="headerlink" title="数据处理类"></a>数据处理类</h2><h2 id="小工具"><a href="#小工具" class="headerlink" title="小工具"></a>小工具</h2><h3 id="时间转换"><a href="#时间转换" class="headerlink" title="时间转换"></a>时间转换</h3><h4 id="年积日、GPS周和对应日期之间的关系查询"><a href="#年积日、GPS周和对应日期之间的关系查询" class="headerlink" title="年积日、GPS周和对应日期之间的关系查询"></a>年积日、GPS周和对应日期之间的关系查询</h4><ol><li><p><a href="http://navigationservices.agi.com/GNSSWeb/" target="_blank" rel="noopener">GPS Calender</a><br>网站以日历的形式展示了过去、现在未来，每个时间段的年积日、GPS周、日期之间的对应关系，方便查询指定日期的GPS周和周内秒。  </p><p><img src="https://raw.githubusercontent.com/guoxianwei/guoxianwei.github.io/picGo/pictures/Snipaste_2020-04-09_12-10-12.jpg" alt="GPS calender"></p></li></ol><ol><li><p>brdm星历 </p><p>用于事后解算，可以配合上面的查询年积日的工具一起使用。  </p><ul><li>NASA :<a href="ftp://cddis.gsfc.nasa.gov/gnss/data/campaign/mgex/daily/rinex3/2020/brdm/" target="_blank" rel="noopener">2020年BRDM星历</a></li></ul></li></ol>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;记录一些有用的数据下载、效率软件地址，以方便查询学习。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h2 id=&quot;数据下载类&quot;&gt;&lt;a href=&quot;#数据下载类&quot; class=&quot;headerlink&quot; title=&quot;数据下载类&quot;&gt;
-      
+      &lt;blockquote&gt;
+&lt;p&gt;记录一些有用的数据下载、效率软件地址，以方便查询学习。&lt;br&gt;
     
     </summary>
     
