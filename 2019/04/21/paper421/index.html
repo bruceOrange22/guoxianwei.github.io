@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="柴米油盐酱醋茶">
 <meta property="og:description" content="说明  原文来自于rtklibexplorer的博客文章《Updated guide to the RTKLIB configuration file》,首先用谷歌翻译进行粗翻译，然后对个别词句做了修改，部分地方做了意译。翻译仅仅为个人阅读方便，有错误的地方还请指出。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-09T02:57:54.492Z">
+<meta property="og:updated_time" content="2020-04-10T01:50:50.359Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="更新RTKLIB 配置文件指南">
 <meta name="twitter:description" content="说明  原文来自于rtklibexplorer的博客文章《Updated guide to the RTKLIB configuration file》,首先用谷歌翻译进行粗翻译，然后对个别词句做了修改，部分地方做了意译。翻译仅仅为个人阅读方便，有错误的地方还请指出。">
@@ -448,7 +448,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-04-09 10:57:54" itemprop="dateModified" datetime="2020-04-09T10:57:54+08:00">2020-04-09</time>
+                <time title="修改时间：2020-04-10 09:50:50" itemprop="dateModified" datetime="2020-04-10T09:50:50+08:00">2020-04-10</time>
               
             
           </span>
@@ -517,13 +517,13 @@
 <h3 id="pos1-snrmask-r-off，pos1-snrmask-b-off，on"><a href="#pos1-snrmask-r-off，pos1-snrmask-b-off，on" class="headerlink" title="pos1-snrmask-r = off，pos1-snrmask-b = off，on"></a>pos1-snrmask-r = off，pos1-snrmask-b = off，on</h3><p>用于计算位置的流动站（_r）和基站（_b）的最小卫星SNR。消除不良卫星可能是一个更有效的标准，因为它是一种更直接的信号质量测量方法，但最佳值会随着接收器类型和天线类型而变化，因此我大部分时间都将其关闭，以避免需要对其进行调整为每个应用程序。</p>
 <h3 id="pos1-snrmask-L1-35-35-35-35-35-35-35-35-35"><a href="#pos1-snrmask-L1-35-35-35-35-35-35-35-35-35" class="headerlink" title="pos1-snrmask_L1 = 35,35,35,35,35,35,35,35,35"></a>pos1-snrmask_L1 = 35,35,35,35,35,35,35,35,35</h3><p>设置每五度仰角的SNR阈值。我通常会将所有值保持不变，并根据标称SNR选择35到38分贝之间的值。仅当pos1-snrmask_x设置为on时才使用这些值。如果您使用双频，则还需要设置“pos1-snrmask_L2”</p>
 <h3 id="pos1-dynamics-on"><a href="#pos1-dynamics-on" class="headerlink" title="pos1-dynamics = on"></a>pos1-dynamics = on</h3><p>设置动态模式为on时，速度和加速状态将会添加到流动站的卡尔曼滤波估计中去。选择它会改善“kinematic”和“static-stat”的结果，但对“static”模式几乎没有影响。在启用dynamics的情况下，代码的运行速度会明显变慢，但demo5版的代码应该没问题。务必根据流动站的运动特征为流动站设置一个合适的“prnaccelh”和“prnaccelv”。dymamics模式与“movingbase”模式不兼容，因此在使用movingbase模式时要把danamics关掉。</p>
-<h3 id="pos1-posopt1-off，on（Sat-PVC）"><a href="#pos1-posopt1-off，on（Sat-PVC）" class="headerlink" title="pos1-posopt1 = off，on（Sat PVC）"></a>pos1-posopt1 = off，on（Sat PVC）</h3><p>设置是否使用卫星天线相位中心变化值。RTK模式下可关闭它，但做PPP的时候需要打开。如果设置为on时则需要在files参数中指定卫星的天线PCV文件。</p>
-<h3 id="pos1-posopt2-off，on（Rec-PCV）"><a href="#pos1-posopt2-off，on（Rec-PCV）" class="headerlink" title="pos1-posopt2 = off，on（Rec PCV）"></a>pos1-posopt2 = off，on（Rec PCV）</h3><p>设置是否使用接收器天线相位中心变化值。如果设置为on，则需要在文件参数中指定接收器天线PCV文件，并在天线部分中指定基站和流动站的接收器天线类型。IGS提供的天线文件中只包含测量级天线，因此当你用的天线在这个列表里的时候就凯瑞用到这些天线文件。它主要影响z轴的精度，因此如果您关心高度，这一点很重要。如果两个两个测站的天线相同，您可以将其关闭，因为它们（通过差分的方式）会被消除。</p>
-<h3 id="pos1-posopt5-off，on（RAIM-FDE）"><a href="#pos1-posopt5-off，on（RAIM-FDE）" class="headerlink" title="pos1-posopt5 = off，on（RAIM FDE）"></a>pos1-posopt5 = off，on（RAIM FDE）</h3><p>如果任何卫星的残差超过了一个阈值，则排除该卫星。这这里只会排除那些误差比较大的卫星，这需要比较大的运算量，所以我通常会将这个选项禁用。</p>
-<h3 id="POS1-exclsats"><a href="#POS1-exclsats" class="headerlink" title="POS1-exclsats ="></a>POS1-exclsats =</h3><p>如果你知道卫星是坏的，你可以通过在这里列出来解决它。如果我怀疑卫星是坏的，我只会在极少数情况下使用它进行调试。</p>
-<h3 id="pos1-navsys-7-15，"><a href="#pos1-navsys-7-15，" class="headerlink" title="pos1-navsys = 7,15，"></a>pos1-navsys = 7,15，</h3><p>（除常用的GPS系统外）我通常也使用GLONASS和SBAS，因为更多的观测信息能带来更好的结果。如果在M8T上使用较新的3.0 u-blox固件，我也会启用Galileo系统。</p>
-<h2 id="SETTING2："><a href="#SETTING2：" class="headerlink" title="SETTING2："></a>SETTING2：</h2><h3 id="pos2-armode-continuous-fix-and-hold"><a href="#pos2-armode-continuous-fix-and-hold" class="headerlink" title="pos2-armode =continuous, fix-and-hold"></a>pos2-armode =continuous, fix-and-hold</h3><p>整周模糊度解算方法。<code>continuous</code>模式不利用固定解来调整相位偏差状态，所以它对假修复最不敏感。<code>fix-and-hold</code>确实利用固定解的反馈来帮助跟踪模糊度。我更喜欢使用<code>fix-and-hold</code>并将跟踪增益（pos2-varholdamb）调整得足够低，以最大限度地减少错误固定的可能性。如果<code>armode</code>未设置为<code>fix-and-hold</code>，则下面提到的和hold相关的任何选项都不适用，包括pos2-gloarmode。</p>
-<h3 id="pos2-varholdamb-0-001-0-1（meter）"><a href="#pos2-varholdamb-0-001-0-1（meter）" class="headerlink" title="pos2-varholdamb = 0.001,0.1（meter）"></a>pos2-varholdamb = 0.001,0.1（meter）</h3><p>在demo5代码中，可以使用此参数来调整<code>fix-and-hold</code>的跟踪增益。它实际上是方差而不是增益，因此较大的值会产生较低的增益。0.001是默认值，任何超过100的效果都很小。该值用作在保持期间产生的伪测量的方差，其提供反馈以将卡尔曼滤波器中的偏置状态朝向整数值驱动。我发现从0.1到1.0的值提供足够的增益来辅助跟踪，同时在大多数情况下仍然避免跟踪错误修复。</p>
+<h3 id="pos1-posopt1-off，on（Sat-PVC）"><a href="#pos1-posopt1-off，on（Sat-PVC）" class="headerlink" title="pos1-posopt1 = off，on（Sat PVC）"></a>pos1-posopt1 = off，on（Sat PVC）</h3><p>设置是否对卫星天线相位中心进行改正。RTK模式下可关闭它，但做PPP的时候需要打开。如果设置为on时则需要在files参数中指定卫星的天线PCV文件。</p>
+<h3 id="pos1-posopt2-off，on（Rec-PCV）"><a href="#pos1-posopt2-off，on（Rec-PCV）" class="headerlink" title="pos1-posopt2 = off，on（Rec PCV）"></a>pos1-posopt2 = off，on（Rec PCV）</h3><p>设置是否对接收机天线相位中心进行改正。如果设置为<code>on</code>，则需要在<code>Options</code>-&gt;<code>Files</code>下给出接收器天线PCV文件的路径，并在<code>Options</code>-&gt;<code>Positions</code>选项页面分别说明基站和流动站的接收器天线类型。IGS提供的天线文件中只包含测量型天线的，所以如果说你使用天线在这个文件列表里的话直接就可以使用。它（指的是否进行天线相位中心改正，译者注）主要影响z方向上的精度，所以如果对高程比较关注的话，则对天线相位中心进行改正就变得比较重要了。如果两个接收机的天线相同则可以置为<code>off</code>，因为它（通过差分的方式）会被消除。</p>
+<h3 id="pos1-posopt5-off，on（RAIM-FDE）"><a href="#pos1-posopt5-off，on（RAIM-FDE）" class="headerlink" title="pos1-posopt5 = off，on（RAIM FDE）"></a>pos1-posopt5 = off，on（RAIM FDE）</h3><p>如果有卫星的残差超过了阈值，则排除该卫星。这里只会排除那些误差比较大的卫星，但由于运算量较大，所以我通常会将这个选项禁用。</p>
+<h3 id="POS1-exclsats"><a href="#POS1-exclsats" class="headerlink" title="POS1-exclsats ="></a>POS1-exclsats =</h3><p>如果你知道某颗卫星质量较差就把它放在这个列表里，那么它就不会参与到解算中来。除非在调试的时候的我怀疑某颗卫星有问题否则我很少会使用这个选项。</p>
+<h3 id="pos1-navsys-7-15，"><a href="#pos1-navsys-7-15，" class="headerlink" title="pos1-navsys = 7,15，"></a>pos1-navsys = 7,15，</h3><p>因为更多的观测信息通常能带来更好的结果，所以（除常用的GPS系统外）通常我也会使用GLONASS和SBAS卫星。如果使用M8T较新的u-blox 3.0 固件，我会把Galileo系统也加入进来。</p>
+<h2 id="SETTING2："><a href="#SETTING2：" class="headerlink" title="SETTING2："></a>SETTING2：</h2><h3 id="pos2-armode-continuous-fix-and-hold"><a href="#pos2-armode-continuous-fix-and-hold" class="headerlink" title="pos2-armode =continuous, fix-and-hold"></a>pos2-armode =continuous, fix-and-hold</h3><p>整周模糊度解算策略。<code>continuous</code>模式不利用固定解来调整相位偏差状态，所以它对假修复最不敏感。<code>fix-and-hold</code>则会利用固定解的反馈来帮助跟踪模糊度。我更喜欢使用<code>fix-and-hold</code>并将跟踪增益（pos2-varholdamb）调整得足够低，以最大限度地减少错误固定的可能性。如果<code>armode</code>未设置为<code>fix-and-hold</code>，则下面提到的和hold相关的任何选项都不再适用，包括pos2-gloarmode。</p>
+<h3 id="pos2-varholdamb-0-001-0-1（meter）"><a href="#pos2-varholdamb-0-001-0-1（meter）" class="headerlink" title="pos2-varholdamb = 0.001,0.1（meter）"></a>pos2-varholdamb = 0.001,0.1（meter）</h3><p>在<code>demo5</code>的代码中，可以使用此参数来调整<code>fix-and-hold</code>的跟踪增益。它实际上是方差而不是增益，因此设置较大的值时会产生较低的增益。0.001是默认值，任何超过100的效果都很小。该值用作在保持期间产生的伪测量的方差，其提供反馈以将卡尔曼滤波器中的偏置状态朝向整数值驱动。我发现从0.1到1.0的值提供足够的增益来辅助跟踪，同时在大多数情况下仍然避免跟踪错误修复。</p>
 <h3 id="pos2-gloarmode-on，fix-and-hold，autocal"><a href="#pos2-gloarmode-on，fix-and-hold，autocal" class="headerlink" title="pos2-gloarmode = on，fix-and-hold，autocal"></a>pos2-gloarmode = on，fix-and-hold，autocal</h3><p>GLONASS整周模糊度解算模式。如果你有多个相同的接收机，那么通常你可以将该值设置为“on”，对于你来说这是一个比较好的选择，这样就可以允许在开始固定模糊度的时候用上glonass的卫星。如果你手里的接收机不一样或者你正在使用两个u-blox M8N接收机，这时候如果你想在模糊度解算中用上GLONASS卫星，这时候需要将此参数设置为“fix-and-hold”，从而消除信道间偏差。 。在这种情况下，刚开始模糊度固定的时候不会用到glonass卫星，等到（用其他系统的卫星）达到第一次固定，这时候可以对信道间偏差进行校正，待完成这一步后就可以用glonass的卫星进行模糊度固定。这里还有一个“autocal”选项，但我从来没有能够在2.4.3代码中顺利跑成功过。我把这个功能加到了demo5的代码中，这样就可以预先调整信道偏差，方差和校准增益。对于特定的接收机对，这个偏差值已知，所以可以在这里直接设置偏差值，同时可以将增益设置得非常低。这会破坏该功能的自动校准方面，但确实提供了一种机制来指定RTKLIB中缺少的偏差。当使用“autocal”时，GLONASS卫星将用于初始采集。“自主”功能还可用于使用迭代方法确定具有零或短基线的通道间偏差。这会破坏该功能的自动校准方面，但确实提供了一种机制来指定RTKLIB中缺少的偏差。当使用“autocal”时，GLONASS卫星将用于初始采集。“自主”功能还可用于使用迭代方法确定具有零或短基线的通道间偏差。这会破坏该功能的自动校准方面，但确实提供了一种机制来指定RTKLIB中缺少的偏差。当使用“autocal”时，GLONASS卫星将用于初始采集。“自主”功能还可用于使用迭代方法确定具有零或短基线的通道间偏差。</p>
 <h3 id="POS2-gainholdamb-0-01"><a href="#POS2-gainholdamb-0-01" class="headerlink" title="POS2-gainholdamb = 0.01"></a>POS2-gainholdamb = 0.01</h3><p>在demo5代码中，可以使用此参数调整GLONASS卫星的通道间偏置校准的增益。 </p>
 <h3 id="pos2-arthres-3"><a href="#pos2-arthres-3" class="headerlink" title="pos2-arthres = 3"></a>pos2-arthres = 3</h3><p>这是用于确定模糊度解析解决方案是否有足够的信心来声明修复的阈值。它是第二最佳解决方案的残差平方与最佳解决方案的比率。我通常总是将其保留为默认值3.0并调整所有其他参数以解决此问题。虽然较大的AR比率表示比低AR比率更高的置信度，但两者之间没有固定的关系。卡尔曼滤波器状态中的误差越大，对于给定的AR比率，该解决方案的置信度将越低。通常，卡尔曼滤波器中的误差在第一次收敛时将是最大的，因此这是最有可能获得错误修复的时间。减少pos2-arthers1可以帮助避免这种情况。  </p>
@@ -596,8 +596,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/09/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/25/newpage/" rel="prev" title="GPS 学习之别人观">
+                GPS 学习之别人观 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -667,7 +667,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -679,14 +679,20 @@
                 <div class="site-state-item site-state-categories">
                   
                     
+                      <a href="/categories/">
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">分类</span>
                   
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
                 </div>
               
 
@@ -696,18 +702,28 @@
                 <div class="site-state-item site-state-tags">
                   
                     
+                      <a href="/tags/">
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">标签</span>
                   
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
                 </div>
               
             </nav>
